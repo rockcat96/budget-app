@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+    <div class="container">
+        
+        <h1>Budgtr ALL</h1>
+        <table>
+            <a href="/budgets/new"><button>Create New Budget Entry</button></a><br><br>
+
+            <% if (bankAccount < 0 ) { %>
+                <h5 id="red">Current Balance: <%= bankAccount %></h5>
+            <% } else if (bankAccount > 1000) { %>
+                <h5 id="green">Current Balance: <%= bankAccount %></h5>
+            <% } else { %>
+                <h5>Current Balance: <%= bankAccount %></h5>
+            <% } %>
+
+
+
+            <%let i = 0%>
+            <% for (entry of budget){ %>
+                <tr>
+                <td><%=entry.date%></td>
+                <td><a href="/budgets/<%=i %>"><%=entry.name%></a></td>
+                <td><%=entry.amount%></td>
+                </tr>
+                <%i+=1%>
+            <% } %>
+
+            
+
+        </table>
+    </div>
+</body>
+</html>

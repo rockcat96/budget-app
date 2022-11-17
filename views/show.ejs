@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+    <div class="container">
+
+        <h1><%=budget[index].name%></h1>
+        <p>date: <%=budget[index].date%></p>
+        <p>name: <%=budget[index].name%></p>
+        <p>from: <%=budget[index].from%></p>
+        <p>amount: <%=budget[index].amount%></p>
+        <p>tags: <%=budget[index].tags%></p>
+        <a href="/budgets"><button>Return to Index</button></a>
+        
+        
+        
+    </div>
+</body>
+</html>

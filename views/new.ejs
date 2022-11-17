@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+    <div class="container">
+
+        <h1>
+            Create a New Budget Entry
+        </h1>
+        <form action = "/budgets" method = "POST">
+            <input type="text" name="date" placeholder="Date Ex: April 1">
+            <input type="text" name="name" placeholder="Name Ex: Taxes"><br>
+            <input type="text" name="from" placeholder="From Ex: Government">
+            <input type="text" name="amount"
+            placeholder="Amount Ex: 3000 or -2000"><br>
+            <input type="submit" value="Create New Entry">
+        </form>
+    </div>
+</body>
+</html>
